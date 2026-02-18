@@ -1,35 +1,33 @@
 # ReconForge
 
-**ReconForge** is an intelligence-driven CLI reconnaissance framework built for offensive security workflows.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Active-orange)
 
-It combines fast discovery, structured intelligence extraction, adaptive enumeration, and dynamic risk scoring into a professional command-line tool.
+**ReconForge** is an intelligence-driven CLI reconnaissance framework designed for structured offensive security workflows.
+
+It combines fast port discovery, service detection, HTTP intelligence extraction, and structured reporting into a single deterministic tool.
 
 ---
 
 ## Features
 
-- Fast TCP discovery (RustScan fallback to Nmap)
+- Fast TCP discovery using RustScan (Nmap fallback supported)
 - Structured Nmap XML parsing
-- Adaptive HTTP pivoting (auto redirect detection)
-- Gobuster parsing with severity classification
-- Technology fingerprinting (WhatWeb integration)
-- Dynamic risk scoring engine
-- Intelligence-based findings model
-- JSON + Markdown report generation
-- Multi-target support
-- Threaded orchestration
-- Clean professional CLI dashboard
+- HTTP intelligence extraction (WhatWeb + Gobuster)
+- Redirect-aware enumeration
+- Risk scoring and severity classification
+- JSON + Markdown reporting
+- Optional safe `/etc/hosts` handling via `--auto-hosts`
+- Clean CLI-first interface
+- Threaded multi-target support
 
 ---
 
 ## Installation
 
-### 1. Clone repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/reconforge.git
+git clone https://github.com/muralikurva1/reconforge.git
 cd reconforge
-
-⚠ Note:
-If a target redirects to a domain (e.g., HTB lab environments), ReconForge may append the entry to /etc/hosts automatically.
-Ensure you review changes before running in production environments.
